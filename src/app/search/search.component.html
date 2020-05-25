@@ -1,0 +1,35 @@
+<ActionBar>
+    <Label text="Search"></Label>
+</ActionBar>
+
+    <StackLayout class="form">
+        <Image src="~/images/logo.png"></Image>
+
+        <!-- <TextField hint="Email Address" keyboardType="email"
+            autocorrect="false" autocapitalizationType="none"
+            [(ngModel)]="user.email" class="input input-border"></TextField> -->
+        <TextField hint="Password" secure="true" [(ngModel)]="searchvalue"
+            class="input input-border"></TextField>
+
+        <!-- <Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'"
+            class="btn btn-primary" (tap)="submit()"></Button>
+        <Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'"
+            (tap)="signUp()"></Button> -->
+            <!-- <Button text="Button" class="btn btn-primary" (tap)="onButtonTap()"></Button> -->
+            <SearchBar hint="Search hint" [text]="searchPhrase"
+    (submit)="onSearchSubmit($event)"></SearchBar>
+    </StackLayout>
+<!-- <GridLayout class="page__content"> -->
+    <!-- <Label class="page__content-icon fas" text="&#xf002;"></Label> -->
+    <!-- <Label class="page__content-placeholder" text="Search page content goes here"></Label> -->
+<!-- </GridLayout> -->
+<!-- <FlexboxLayout>
+    <StackLayout>
+      <TextField hint="Email Address" keyboardType="email"
+        autocorrect="false" autocapitalizationType="none"></TextField>
+      <TextField hint="Password" secure="true"></TextField>
+  
+      <Button text="Sign in"></Button>
+      <Button text="Sign up for Groceries"></Button>
+    </StackLayout>
+  </FlexboxLayout> -->

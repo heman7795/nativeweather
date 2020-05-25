@@ -1,0 +1,45 @@
+<ActionBar>
+    <Label text="Weather app"></Label>
+</ActionBar>
+<FlexboxLayout class="page" *ngIf="search==true">
+    <GridLayout class="page__content" *ngIf="search==true" (tap)="displayPromptDialog()">
+        <Label class="page__content-icon fas" text="&#xf002;" ></Label>
+        <Label class="page__content-placeholder" text="Search Here"></Label>
+    </GridLayout>
+ 
+</FlexboxLayout>
+
+<!-- <Image src="font://&#xf51e;" stretch="none" class="fas"></Image> -->
+<!-- <StackLayout *ngIf="search==false"> -->
+    <!-- <Image class="logo" src="~/images/logo.png"></Image>
+    <Label class="header" text="WEATHER APP"></Label> -->
+
+
+    <!-- <Button text ="Search" *ngIf="search==false"
+        (tap)="displayPromptDialog()" class="btn btn-primary m-t-20"></Button> -->
+     <!-- <Label *ngIf="isLoggingIn" text="Forgot your password?" class="login-label"
+        (tap)="forgotPassword()"></Label> -->
+ <!-- </StackLayout>  -->
+<GridLayout class="page__content" *ngIf="search==false" >
+    <!-- <ScrollView class="page"> -->
+        <StackLayout (tap)="displayEditDialog(datas.name)">
+        
+            <!-- <CardView *ngFor="let item of data" class="card" elevation="40" radius="10" ios:shadowRadius="3">
+                <StackLayout class="card-layout">
+                    <Label class="h2" [text]="item.heading"></Label>
+                    <Label class="body" textWrap="true" [text]="item.content"></Label>
+                </StackLayout>
+            </CardView> -->
+            
+            <CardView  class="card" elevation="40" radius="10" ios:shadowRadius="3" (tap)="displayEditDialog(datas.name)">
+                <StackLayout class="card-layout" style="background-color: aquamarine;">
+                    <Label class="h2" [text]="datas.name"></Label>
+                    <Label class="body" textWrap="true" [text]="weather"></Label>
+                    <Label class="body" textWrap="true" [text]="temp"></Label>
+                    <Label class="body" textWrap="true" [text]="visiblity"></Label>
+                    <Label class="body" textWrap="true" [text]="windspeed"></Label>
+                </StackLayout>
+            </CardView>
+        </StackLayout>
+    <!-- </ScrollView> -->
+</GridLayout>

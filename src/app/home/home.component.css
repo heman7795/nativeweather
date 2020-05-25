@@ -1,0 +1,41 @@
+.card {
+    background-color: #fff;
+    color: #4d4d4d;
+    margin: 15 15 0;
+}
+.card-layout {
+    padding: 20;
+}
+.card-layout .h1 {
+    margin-bottom: 15;
+    font-style: italic;
+}
+
+button{
+    margin-bottom: 80%;
+}
+.page__content{
+    margin-top: 20%;
+}
+.page__content.card{
+    background-color: cornflowerblue;
+}
+
+
+
+
+.far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands", "fa-brands-400";
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+}
+
+.ico {
+    font-family: "IcoMoon-Free";
+}

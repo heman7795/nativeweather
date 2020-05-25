@@ -1,0 +1,59 @@
+<ActionBar>
+    <NavigationButton (tap)="onBackTap()" android.systemIcon="ic_menu_back"></NavigationButton>
+    <Label [text]="item.name"></Label>
+</ActionBar>
+
+<GridLayout>
+    <Label class="m-10 h3" verticalAlignment="top" [text]="item.description"></Label>
+</GridLayout>
+
+
+
+
+<ActionBar>
+    <Label text="Weather"></Label>
+</ActionBar>
+
+
+<!-- <GridLayout>
+    <ListView [hrweather]="items">
+        <ng-template let-item="item">
+            <StackLayout>
+                <Label [nsRouterLink]="['../item', item.id]" [text]="item.name"></Label>
+                <Label  [text]="item.name"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout> -->
+
+
+<GridLayout class="page__content" *ngIf="search==true" (tap)="displayPromptDialog()">
+    <Label class="page__content-icon fas" text="&#xf002;" ></Label>
+    <Label class="page__content-placeholder" text="Search Here"></Label>
+</GridLayout>
+
+<GridLayout  >
+	<!-- <ScrollView class="page"> -->
+		<StackLayout>
+		
+			<!-- <CardView *ngFor="let item of data" class="card" elevation="40" radius="10" ios:shadowRadius="3">
+				<StackLayout class="card-layout">
+					<Label class="h2" [text]="item.heading"></Label>
+					<Label class="body" textWrap="true" [text]="item.content"></Label>
+				</StackLayout>
+            </CardView> -->
+            
+            <CardView  class="card" elevation="40" radius="10" ios:shadowRadius="3">
+				<StackLayout class="card-layout">
+					<Label class="h2" text="Hemanth"></Label>
+					<Label class="body" textWrap="true" text="  I love Hemanth"></Label>
+				</StackLayout>
+			</CardView>
+		</StackLayout>
+	<!-- </ScrollView> -->
+</GridLayout>
+<!-- <StackLayout class="p-15" sdkExampleTitle sdkToggleNavButton>
+    <Button class="btn btn-primary btn-active" text="Display Prompt Dialog" (tap)="displayPromptDialog()"></Button>
+</StackLayout> -->
+
+
