@@ -18,7 +18,9 @@ export class HomeComponent implements OnInit {
     data = [];
     visiblity: any;
     windspeed: any;
-    isBusy:boolean
+    processing = false;
+
+
     constructor(private _itemService: DataService,private routerExtensions: RouterExtensions) { }
 
     ngOnInit(): void {
@@ -83,8 +85,11 @@ export class HomeComponent implements OnInit {
     }
 
     getweather(city:string){
-    
+        this.processing = true;
         this._itemService.getweather(city).subscribe(data =>{
+           
+            if(data){
+            this.processing = false;
             this.search = false
             this.datas = data
             this.weather=this.datas.weather
@@ -92,9 +97,11 @@ export class HomeComponent implements OnInit {
             this.temp="Temprature:"+" "+this.datas.main.temp
             this.visiblity="Visibility:"+" "+this.datas.visibility
             this.windspeed="Wind speed:"+" "+this.datas.wind.speed
+            }
     },
     error =>{
         // console.log("error occurence"+error)
+        this.processing = false;
         alert("Wrong city name")
     })
     }

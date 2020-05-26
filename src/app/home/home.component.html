@@ -8,29 +8,10 @@
     </GridLayout>
  
 </FlexboxLayout>
+<ActivityIndicator color="green" [busy]="processing" rowSpan="3"></ActivityIndicator>
 
-<!-- <Image src="font://&#xf51e;" stretch="none" class="fas"></Image> -->
-<!-- <StackLayout *ngIf="search==false"> -->
-    <!-- <Image class="logo" src="~/images/logo.png"></Image>
-    <Label class="header" text="WEATHER APP"></Label> -->
-
-
-    <!-- <Button text ="Search" *ngIf="search==false"
-        (tap)="displayPromptDialog()" class="btn btn-primary m-t-20"></Button> -->
-     <!-- <Label *ngIf="isLoggingIn" text="Forgot your password?" class="login-label"
-        (tap)="forgotPassword()"></Label> -->
- <!-- </StackLayout>  -->
 <GridLayout class="page__content" *ngIf="search==false" >
-    <!-- <ScrollView class="page"> -->
-        <StackLayout (tap)="displayEditDialog(datas.name)">
-        
-            <!-- <CardView *ngFor="let item of data" class="card" elevation="40" radius="10" ios:shadowRadius="3">
-                <StackLayout class="card-layout">
-                    <Label class="h2" [text]="item.heading"></Label>
-                    <Label class="body" textWrap="true" [text]="item.content"></Label>
-                </StackLayout>
-            </CardView> -->
-            
+        <StackLayout (tap)="displayEditDialog(datas.name)">  
             <CardView  class="card" elevation="40" radius="10" ios:shadowRadius="3" (tap)="displayEditDialog(datas.name)">
                 <StackLayout class="card-layout" style="background-color: aquamarine;">
                     <Label class="h2" [text]="datas.name"></Label>
@@ -41,5 +22,4 @@
                 </StackLayout>
             </CardView>
         </StackLayout>
-    <!-- </ScrollView> -->
 </GridLayout>
